@@ -2,11 +2,96 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Stand'Wich | Welcome!{% endblock %}</title>
+     	<link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('/Font-Awesome-master/css/all.css') }}">
+		<link rel="stylesheet" href="{{ asset('/js/bootstrap.min.js') }}">
+		<link rel="stylesheet" href="{{ asset('/js/jquery.js') }}">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
         {% block stylesheets %}{% endblock %}
+    
+         <style> 
+        	
+        /* Setting the stroke to green using rgb values (0, 128, 0) */ 
+          
+        .custom-toggler .navbar-toggler-icon { 
+            background-image: url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+
+        } 
+
+    </style> 
+
+
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body style="/*background-image:url(img/imagedefond.jpg)*/ background-color: black;" >
+    	<div class="container">
+    		<!-- En tete-->
+    		<header class="fixed-top position-sticky" >
+    			
+    			<nav class="navbar-nav navbar-expand-lg" style="margin-bottom: 5px; padding-left: 15px; background-color: #850606 " >
+    				<a  class="navbar-brand" href="/" >
+    					<div align="center"><i class=" fas fa-home fa-3x" style="color: black;"  ></i>
+    					<strong><h5 style="font-family: fantasy; color: #775935">Stand'Wich</h5></strong>
+    					</div>
+    				</a>
+    				<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    					<span class="navbar-toggler-icon"></span>
+    				</button>
+
+    				<div class="collapse navbar-collapse " id="navbarColor02" >
+    					<ul class="navbar-nav mx-auto" style="font-family: fantasy; "  >
+    						<li class="nav-item active" style="border:2px solid #666">
+    							<a style="font-size:1.2em; text-align: center; color: white" class="nav-link waves-effect waves-light" href="/connection">Connexion<span class="sr-only">(current)</span></a>
+    						</li>
+
+    						<li class="nav-item" style="border:2px solid #666"	>
+    							<a style="font-size:1.2em; text-align: center; color: white" class="nav-link" href="/menu">Menu<span class="sr-only">(current)</span></a>
+    						</li>
+
+    						<li class="nav-item" style="border:2px solid #666">
+    							<a style="font-size:1.2em; text-align: center; color: white" class="nav-link" href="/commande">Commander</a>
+    						</li>
+
+    						<li class="nav-item" style="border:2px solid #666">
+    							<a style="font-size:1.2em; text-align: center; color: white" class="nav-link" href="/contact">Contact</a>
+    						</li>
+    					</ul>
+	    				<div align="center" style="padding-top: 15px;padding-bottom: 15px">	
+	    					<!--Telephone-->
+	    					<a class=" 	fas fa-phone mr-3 fa-2x" style="color: white;" role="button"><i ></i></a>
+	    					<!--Maps-->
+	    					<a class=" 	fas fa-map-marker-alt mr-3 fa-2x	" style="color: white;" role="button"><i ></i></a>
+
+	    					<!--Facebook-->
+							<a class="fb-ic mr-3" style="color: black;" role="button"><i class="fab fa-lg fa-facebook-f"></i></a>
+							<!--Google +-->
+							<a class="gplus-ic mr-3" style="color: black;" role="button"><i class="fab fa-lg fa-google"></i></a>
+							<!--Instagram-->
+							<a class="ins-ic mr-3" style="color: black;" role="button"><i class="fab fa-lg fa-instagram"></i></a>
+						</div>	
+    				</div>
+    			</nav>
+    		</header>
+
+    		<!-- Corps du site-->
+    		<section class="container " >
+    			{% block section %}{% endblock %}
+    			
+    			
+
+    		</section>
+
+    		<!-- Pied de page-->
+    		<footer class="fixed-bottom position-relative" style="background-color: #850606; margin-top:5px">
+    			<h5 align="center" style="color: white">© 2019 • Stand'wich • Tous droits réservés</h1>
+    		</footer>
+    	</div>
+        
         {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{%block section %}
+
+<div class="container contact-form" style="background-color: lightgray;">
+
+	<form method="post" >
+		<br>
+		<h3 align="center" class="title tpl streaked-title">CONTACTEZ-NOUS</h3>
+		<h7>Pour toute information, nous sommes à votre disposition par mail en renseignant le formulaire ci-dessous :</h7>
+		<br><br>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group" >
+					<select class="form-group" name="profil" style="width: 100%;">
+						<option value="parti" selected="selected">Monsieur</option>
+						<option value="profe" >Madame</option>
+						<option value="insti">Mademoiselle </option>
+					</select> 
+
+						<input type="text" name="firstName" class="form-control" placeholder="Nom *" value="" style="margin-top: 5px"/>
+				</div>
+								
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<input type="text" name="lastName" class="form-control" placeholder="Prénom *" value="" />
+					<input type="text" name="txtEmail" class="form-control" placeholder="Email *" value="" style="margin-top: 5px" />
+				</div>
+				<div class="form-group">
+					
+				</div>
+				
+				
+			</div>
+			<div class="form-group col-md-12" align="center">
+				<input type="text" name="objet" class="form-control" placeholder="Objet *" value="" />
+			</div>
+			<div class="form-group col-md-12" align="center">
+				<textarea name="txtMsg" class="form-control" placeholder="Votre Message *"  style="width: 100%; height: 100%;"></textarea>
+				<div class="form-group col-md-6" align="center">
+					<label>* Champs obligatoires</label>
+					<input type="submit" name="btnSubmit" class="btnContact" value="Envoyer" />
+				</div>
+			</div>
+		</div>
+		
+	</form>
+
+	<!--Grid column-->
+	<div >
+		<!--Google map-->
+		<br><br>
+		<div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 100%;margin: auto;">
+
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.5917939315996!2d0.23933335140319628!3d47.165848726210946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fd42281ab04e99%3A0x3c8e69d18178a564!2s29%20Rue%20Rabelais%2C%2037500%20Chinon!5e0!3m2!1sfr!2sfr!4v1588778043311!5m2!1sfr!2sfr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+
+		<br>
+		<!--Buttons-->
+		<div class="row text-center">
+			<div class="col-md-4">
+				<a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+				<p>29 Rue Rabelais, 37500 Chinon, France</p>
+
+			</div>
+
+			<div class="col-md-4">
+				<a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+				<p>02.47.93.99.54 </p>
+			</div>
+
+			<div class="col-md-4">
+				<a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+				<p>contact@standwich.com</p>
+
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
+
+
+{% endblock %}

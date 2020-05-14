@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block section %}
+	<div id="buttons" class="row justify-content-center" >
+		
+		<div class="col-md-2  text-center " style="margin: 5px; border:2px solid;padding: 3px;">
+			<a href="/menu/classique" style="color: white;"> CASSIQUE</a>
+		</div>
+		<div class="col-md-2 text-center" style="margin: 5px;border:2px solid;padding: 3px;">
+			<a href="/menu/speciaux" style="color: white;"> SPECIAUX</a>
+		</div>
+		<div class="col-md-2 text-center" style="margin: 5px;border:2px solid;padding: 3px;">
+			<a href="/menu/burgers" style="color: white;"> BURGERS</a>
+		</div>
+		<div class="col-md-2 text-center" style="margin: 5px;border:2px solid;padding: 3px;">
+			<a href="/menu/salades" style="color: white;"> SALADES</a>
+		</div>
+		<div class="col-md-2 text-center" style="margin: 5px;border:2px solid;padding: 3px;">
+			<a href="/menu/assiettes" style="color: white;"> ASSIETTES</a>
+		</div>
+		<div class="col-md-2 text-center" style="margin: 5px;border:2px solid;padding: 3px;">
+			<a href="/menu/tacos" style="color: white"> TACOS</a>
+		</div>
+		<div class="col-md-2 text-center" style="margin: 5px;border:2px solid;padding: 3px;">
+			<a href="/menu/panini" style="color: white;"> PANINI</a>
+		</div>
+		<div class="col-md-2 text-center" style="margin: 5px;border:2px solid;padding: 3px;">
+			<a href="/menu/barquettes" style="color: white;"> BARQUETTES</a>
+		</div>
+		<div class="col-md-2 text-center" style="margin: 5px;border:2px solid;padding: 3px;">
+			<a href="/menu/desserts" style="color: white;"> DESSERTS</a>
+		</div>
+		<div class="col-md-2 text-center" style="margin: 5px;border:2px solid;padding: 3px;">
+			<a href="/menu/boissons" style="color: white;"> BOISSONS</a>
+		</div>
+		
+		
+	</div>
+	<div id="presentationMenu" style="width: 100%; background-color: lightgray">
+		<div >
+			{% block menu %}{% endblock %}
+		</div>
+
+		
+	</div>
+			
+
+{% endblock %}
+
+
+
+
